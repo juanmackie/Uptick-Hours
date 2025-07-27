@@ -64,7 +64,7 @@ def calculate_daily_totals(df, rounding_method='None'):
 
 def main():
     st.set_page_config(page_title="Team Hours Analysis", layout="wide")
-    st.title("Team Hours Analysis Dashboard | Made with ❤️ by Juan Mackie")
+    st.title("Team Hours Analysis Dashboard | Made with ❤️ by [Juan Mackie](https://juanmackie.com)")
     
     st.info("""
     ### How to Use This App
