@@ -68,11 +68,9 @@ def main():
     
     st.info("""
     ### How to Use This App
-    
-    1. Make sure Streamlit is installed: `python -m pip install streamlit pandas plotly numpy`
-    2. Run this app using: `python -m streamlit run your_file.py`
-    3. A browser window will automatically open
-    4. Use the file uploader in the sidebar to select your CSV file
+    1. From the sidebar upload your exported pay week hours file from uptick.
+    2. From there everything else should populate.
+    3. This was very quickly thrown together as I needed to check something but please give me some feedback happy to build it out and hopefully it becomes a better way to review hours.
     
     This app analyzes your team's work hours and highlights days where technicians worked less than the threshold or more than the overtime threshold.
     """)
