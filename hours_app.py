@@ -27,7 +27,7 @@ def load_data(file):
         
         return df
     except Exception as e:
-        st.error(f"Error loading  {str(e)}")
+        st.error(f"Error loading file: {str(e)}")
         st.error("Please ensure you're uploading the correct CSV format exported from your system.")
         return None
 
@@ -36,9 +36,10 @@ def apply_rounding(hours, method='15min'):
     if pd.isna(hours):
         return hours
         
-    if method == '15min':  # 15 minutes = 0.25 hours
+    # Accept both '15min'/'30min' and '15minutes'/'30minutes'
+    if method in ('15min', '15minutes'):  # 15 minutes = 0.25 hours
         return np.round(hours * 4) / 4
-    elif method == '30min':  # 30 minutes = 0.5 hours
+    elif method in ('30min', '30minutes'):  # 30 minutes = 0.5 hours
         return np.round(hours * 2) / 2
     elif method == 'hour':
         return np.round(hours)
